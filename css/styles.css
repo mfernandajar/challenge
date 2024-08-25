@@ -1,0 +1,388 @@
+:root {
+    --color-primario: #ffffff;
+    --color-secundario: #ffffff;
+    --color-terciario: #d9e7f3;
+    --color-cuaternario: #ffffff;
+    --color-borde: #ffffff;
+    --color-hover: #cbc6c6;
+    --color-boton1: rgba(255, 225, 0, 0.788);
+    --color-letra: #ffffff;
+    --color-boton2: #ffffff;
+    --color-letra2: #000000;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-image: url(../imagenes/castillo.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+header {
+    margin-bottom: 5rem;
+    width: 60%;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+}
+
+header img {
+    width: 120px;
+    height: 48px;
+}
+
+.big_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 70dvh;
+}
+
+/*caja de texto a ingresar*/
+.sm_box {
+    width: 100%;
+    max-width: 577px;
+    height: 64dvh;
+    color: var(--color-letra);
+    border: 1px solid var(--color-borde);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-sizing: border-box;
+    box-shadow: 1px 7px 30px -8px var(--color-cuaternario);
+    border-radius: 18px;
+    outline: none;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 25px;
+    margin-bottom: 3rem;
+    overflow: auto;
+}
+
+
+/*cambia color ingrese texto*/
+::placeholder {
+    color: var(--color-primario);
+}
+
+.alert__msj {
+    color: var(--color-letra);
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    margin-bottom: 1.5rem;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 21px;
+}
+
+.alerta {
+    width: 20px;
+    height: 20px;
+}
+
+.submit_box {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+/*btn encriptar*/
+.form__btn {
+    background: var(--color-boton1);
+    color: var(--color-letra2);
+    padding: 1rem 2rem;
+    width: 328px;
+    height: 67px;
+    border-radius: 24px;
+    border: 1px solid var(--color-boton1);
+    box-shadow: 1px 7px 30px -8px var(--color-boton1);
+}
+
+.form__btn:hover {
+    background-color: var(--color-hover);
+}
+
+/*btn desencriptar*/
+.form__btn--secundary {
+    background: var(--color-boton1);
+    color: var(--color-letra2);
+    font-size: 1.6rem;
+    padding: 1rem 2rem;
+    width: 328px;
+    height: 67px;
+    border-radius: 24px;
+    border: 2px solid var(--color-boton1);
+    box-shadow: 1px 7px 30px -8px var(--color-boton1);
+}
+
+.result__title { 
+    color: var(--color-letra);
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 21px;
+}
+
+.result__text { 
+    color: var(--color-letra);
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 21px;
+}
+
+.result__btn { 
+    color: var(--color-letra2);
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 21px;
+}
+
+.form__btn{ 
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 21px;
+}
+/*fondo caja encriptada*/
+.result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10rem;
+    height: 77dvh;
+    border-radius: 32px;
+    max-width: 40rem;
+    width: 100%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    text-align: center;
+    font-size: 1.5rem;
+    border: 1px solid var(--color-borde);
+    box-sizing: border-box;
+    box-shadow: 1px 12px 32px -8px var(--color-cuaternario);
+}
+
+.hidden {
+    display: none;
+}
+
+.footer {
+    text-align: center;
+    color: var(--color-letra);
+    padding: 1.5rem;
+    font-weight: 400;
+    margin-top: 16rem;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 25px;
+    left: 0vw;
+    top: 0vh;
+}
+
+.iconos_redes {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+
+
+@media screen and (max-width:768px) {
+    main {
+        flex-direction: column;
+    }
+
+    .submit_box {
+        justify-content: center;
+    }
+
+    .sm_box {
+        margin: auto;
+        margin-block-end: 2rem;
+    }
+
+    .result {
+        height: auto;
+        max-width: 624px;
+        margin-top: 2rem;
+        min-height: 186px;
+        margin: auto;
+        margin-top: 2rem;
+    }
+
+    .loader {
+        margin-top: 1rem;
+    }
+
+    header img {
+        width: 73px;
+    }
+
+    .loader_star {
+        display: none;
+    }
+
+}
+
+/*Loaders*/
+
+/*loader love x robot*/
+.loader {
+    display: flex;
+    position: relative;
+    justify-items: center;
+    align-items: end;
+    gap: 1rem;
+    height: 237px;
+    width: 242px;
+    overflow: hidden;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    position: relative;
+    align-items: center;
+}
+
+
+
+/*container robot*/
+.loader .container:nth-child(3) {
+    justify-content: flex-end;
+    justify-items: flex-end;
+    animation: scroll-down 4s infinite ease-in-out;
+    animation-delay: 3s;
+}
+
+/*container x*/
+.loader .container:nth-child(2) {
+    justify-content: flex-end;
+    justify-items: flex-end;
+    animation: scroll-down 4s infinite ease-in-out;
+    animation-delay: 3s;
+}
+
+/*container heart*/
+.loader .container:nth-child(1) {
+    justify-content: flex-end;
+    justify-items: flex-end;
+    animation: scroll-down 3s infinite ease-in-out;
+    animation-delay: 3s;
+}
+
+
+
+.loader:hover {
+    animation: none;
+}
+
+
+@keyframes scroll-up {
+    0% {
+        transform: translateY(0);
+        filter: blur(0);
+    }
+
+    30% {
+        transform: translateY(-150%);
+        filter: blur(10px);
+    }
+
+    60% {
+        transform: translateY(0);
+        filter: blur(0px);
+    }
+}
+
+@keyframes scroll-down {
+    0% {
+        transform: translateY(0);
+        filter: blur(0);
+    }
+
+    30% {
+        transform: translateY(150%);
+        filter: blur(10px);
+    }
+
+    60% {
+        transform: translateY(0);
+        filter: blur(0px);
+    }
+}
+
+@keyframes rotation {
+
+    20%,
+    100% {
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes blink {
+    0% {
+        height: 0;
+    }
+
+    20% {
+        height: 12px;
+    }
+
+    100% {
+        height: 12px;
+    }
+}
+
+
+/*Imagen de batman*/
+/* HTML: <div class="loader"></div> */
+.loader_star {
+    width: 150px;
+    height: 150px;
+    position: relative;
+}
+
+
+.loader_star:before,
+.loader_star:after {
+    content: "";
+    color: rgb(243, 222, 60);
+    position: absolute;
+    inset: 0;
+    background: rgb(243, 222, 60);
+    box-shadow: 0 0 0 50px;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+.loader_star:after {
+    animation: l9 1s infinite;
+    transform: perspective(300px) translateZ(0px)
+}
+
+
+
+
+@keyframes l9 {
+    to {
+        transform: perspective(300px) translateZ(100px);
+        opacity: 0
+    }
+}

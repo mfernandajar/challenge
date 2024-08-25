@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Encriptador de texto</title>
+        <link rel="icon" type="image/x-icon" href="./imagenes/oracle.ico"> 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./css/styles.css">
+    </head>
+    <body>
+        <header>
+            <img src="./imagenes/logo.png" alt="Logo">
+        </header>
+        <main>
+            <form class="big_box">
+                <textarea class="sm_box" name="mensaje" id="" cols="30" rows="10" placeholder="Ingrese el texto aqui"></textarea>
+                <div class="btn_box">
+                    <div class="alert__msj"><img  class="alerta" src="./imagenes/alerta.png" alt="alert icon"><span>Solo letras 
+                        minúsculas y sin acentos</span>
+                    </div>
+                </div>
+                <div class="submit_box">
+                    <input class="form__btn" type="submit" value="Encriptar">
+                    <input class="form__btn form__btn--secundary" type="submit" value="Desencriptar">
+                </div>
+            </form>
+            <aside class="result">
+                <div class="loader">
+                    <img src="./imagenes/merlin.gif" class="merlin"/>
+                </div>
+                <div class="loader_star hidden">
+                </div>
+                <div class="result_box">
+                    <h3 class="result__title">Ningún mensaje fue encontrado</h3>
+                    <p class="result__text">Ingresa el texto que deseas encriptar o desencriptar</p>
+                    <button class="result__btn form__btn form__btn--secundary hidden">Copiar</button>
+                </div>
+            </aside>
+        </main>
+        <footer class="footer">
+            <p>© Desarrollado por María Fernanda Rodíguez Jaramillo</p>
+            <div class="enlaces_perfil">
+                <a class="enlaces" target="_blank" href="https://github.com/mfernandajar"> <img class="iconos_redes" src="./imagenes/github.png"></a>
+                <a class="enlaces" target="_blank" href="https://www.linkedin.com/in/mar%C3%ADa-fernanda-rodr%C3%ADguez-jaramillo-2608a7262/"> <img class="iconos_redes" src="./imagenes/linkedin.png"></a>
+            </div>
+        </footer>
+        <script src="./encriptador.js"></script>
+    </body>
+</html>
